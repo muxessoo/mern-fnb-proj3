@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  HashRouter as Router,
-  Route,
-  Routes,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import CreatePost from "./pages/CreatePost.jsx";
 import Feed from "./pages/Feed.jsx";
 
