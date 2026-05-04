@@ -3,7 +3,7 @@ const app = require('./src/app')
 const connectDB= require('./src/db/db')
 const axios = require('axios');
 
-const URL = `https://mern-fnb-proj3.onrender.com/posts`;
+const URL = 'https://mern-fnb-proj3.onrender.com/posts'
 setInterval(() => {
   axios.get(URL)
     .then(() => console.log('Ping successful: Keeping the server awake!'))
