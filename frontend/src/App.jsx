@@ -1,18 +1,24 @@
-import React from 'react'
-import {BrowserRouter as Router, Route, Routes, Navigate} from 'react-router-dom'
-import CreatePost from './pages/CreatePost.jsx'
-import Feed from './pages/Feed.jsx'
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
+import CreatePost from "./pages/CreatePost.jsx";
+import Feed from "./pages/Feed.jsx";
 
 const App = () => {
   return (
     <Router>
-        <Routes>
-            <Route path='/' element={<Navigate to='/feed' replace />} />
-            <Route path='/create-post' element={<CreatePost/>}/>
-            <Route path='/feed' element={<Feed/>}/>
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Feed />} /> {/* होम पेज के लिए */}
+        <Route path="/create-post" element={<CreatePost />} />
+        <Route path="/feed" element={<Feed />} />
+        <Route path="*" element={<Feed />} />
+      </Routes>
     </Router>
-  )
-}
+  );
+};
 
-export default App
+export default App;
