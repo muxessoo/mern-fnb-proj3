@@ -10,7 +10,7 @@ const app = express()
 // middlewares
 app.use(express.json())
 app.use(cors({
-    origin: 'http://mern-fnb-proj3.onrender.com/'
+    origin: 'http://mern-fnb-proj3.onrender.com'
 }));
 
 const upload = multer({storage:multer.memoryStorage()})

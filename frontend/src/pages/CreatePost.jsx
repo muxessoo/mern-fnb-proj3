@@ -12,7 +12,7 @@ const CreatePost = () => {
 
         const formData = new FormData(e.target)
         try {
-            axios.post('https://mern-fnb-proj3.onrender.com/create-post', formData)
+            await axios.post('https://mern-fnb-proj3.onrender.com/create-post', formData)
             .then((res)=>{
                 navigate('/feed')
             })
