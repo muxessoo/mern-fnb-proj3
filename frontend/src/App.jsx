@@ -12,7 +12,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Feed />} /> {/* होम पेज के लिए */}
+        <Route path="/" element={<Feed />} />
         <Route path="/create-post" element={<CreatePost />} />
         <Route path="/feed" element={<Feed />} />
         <Route path="*" element={<Feed />} />
