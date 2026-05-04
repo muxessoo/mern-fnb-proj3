@@ -5,7 +5,7 @@ const Feed = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/posts").then((res) => {
+    axios.get("https://mern-fnb-proj3.onrender.com/posts").then((res) => {
       setPosts(res.data.posts);
     });
   }, []);
