@@ -8,7 +8,7 @@ const Feed = () => {
 
   useEffect(() => {
     axios.get("https://mern-fnb-proj3.onrender.com/posts").then((res) => {
-      setPosts(res.data.posts);
+      setPosts(res.data.posts.reverse());
     });
   }, []);
 
