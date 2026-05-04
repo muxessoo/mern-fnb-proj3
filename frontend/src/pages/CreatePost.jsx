@@ -28,7 +28,7 @@ const CreatePost = () => {
         <section className="create-post-section">
             <h1>Create Post</h1>
             <form onSubmit={handleSubmit} >
-                <input type="file" name='image' accept='image' />
+                <input type="file" name='image' accept='image/*' />
                 <input type="text" name='caption' placeholder='Enter caption' />
                 <button type='submit' >Submit</button>
             </form>
