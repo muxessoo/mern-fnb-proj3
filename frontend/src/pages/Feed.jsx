@@ -13,7 +13,7 @@ const Feed = () => {
 
   return (
     <section className="feed-section">
-      <button onClick={() => window.location.href = '/create-post'}>Create</button>
+      <button onClick={() => window.location.href = '/#/create-post'}>Create</button>
       {posts.length > 0 ? (
         posts.map((post) => (
           <div key={post._id} className="post-card">

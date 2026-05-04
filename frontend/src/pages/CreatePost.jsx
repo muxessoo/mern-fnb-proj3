@@ -1,40 +1,24 @@
-import React from 'react'
-import axios from 'axios'
-import {useNavigate} from 'react-router-dom'
+import React from "react";
+import {
+  HashRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
+import CreatePost from "./pages/CreatePost.jsx";
+import Feed from "./pages/Feed.jsx";
 
-
-const CreatePost = () => {
-
-    const navigate = useNavigate()
-
-    const handleSubmit = async(e)=>{
-        e.preventDefault()
-
-        const formData = new FormData(e.target)
-        try {
-            await axios.post('https://mern-fnb-proj3.onrender.com/create-post', formData)
-            .then((res)=>{
-                navigate('/feed')
-            })
-        } catch (error) {
-            
-        }
-        
-        
-    }
-
+const App = () => {
   return (
-    <div>
-        <section className="create-post-section">
-            <h1>Create Post</h1>
-            <form onSubmit={handleSubmit} >
-                <input type="file" name='image' accept='image/*' />
-                <input type="text" name='caption' placeholder='Enter caption' />
-                <button type='submit' >Submit</button>
-            </form>
-        </section>
-    </div>
-  )
-}
+    <Router>
+      <Routes>
+        <Route path="/" element={<Feed />} />
+        <Route path="/feed" element={<Feed />} />
+        <Route path="/create-post" element={<CreatePost />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </Router>
+  );
+};
 
-export default CreatePost
+export default App;
